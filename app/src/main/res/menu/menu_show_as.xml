@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
         android:id="@+id/menu_show_as"
         android:showAsAction="never"
         android:orderInCategory="40"
-        android:title="@string/menu_show_as">
+        android:title="@string/menu_show_as"
+            tools:ignore="AppCompatResource">
         <menu>
             <item
                 android:id="@+id/menu_show_as_list"

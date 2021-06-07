@@ -18,13 +18,13 @@
         android:name=".TimberApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="Timber"
+        android:label="Youtubify"
         android:theme="@style/AppTheme.FullScreen.Light"
         tools:replace="android:allowBackup, android:label">
 
         <activity
             android:name=".activities.MainActivity"
-            android:label="Timber"
+            android:label="Youtubify"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

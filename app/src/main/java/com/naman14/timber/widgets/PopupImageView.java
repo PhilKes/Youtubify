@@ -1,5 +1,6 @@
 package com.naman14.timber.widgets;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import com.afollestad.appthemeengine.util.TintHelper;
 /**
  * Created by naman on 29/10/16.
  */
+@SuppressLint("AppCompatCustomView")
 public class PopupImageView extends ImageView {
 
     public PopupImageView(Context context) {

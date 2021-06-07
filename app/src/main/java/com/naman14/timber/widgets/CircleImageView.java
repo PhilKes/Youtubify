@@ -1,5 +1,6 @@
 package com.naman14.timber.widgets;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -23,6 +24,7 @@ import android.widget.ImageView;
 
 import com.naman14.timber.R;
 
+@SuppressLint("AppCompatCustomView")
 public class CircleImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;

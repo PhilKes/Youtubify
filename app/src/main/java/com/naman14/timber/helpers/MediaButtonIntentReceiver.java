@@ -11,6 +11,7 @@
 
 package com.naman14.timber.helpers;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -107,6 +108,7 @@ public class MediaButtonIntentReceiver extends WakefulBroadcastReceiver {
         startWakefulService(context, i);
     }
 
+    @SuppressLint("InvalidWakeLockTag")
     private static void acquireWakeLockAndSendMessage(Context context, Message msg, long delay) {
         if (mWakeLock == null) {
             Context appContext = context.getApplicationContext();

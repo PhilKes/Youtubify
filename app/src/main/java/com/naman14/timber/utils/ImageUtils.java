@@ -19,12 +19,15 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.RequiresApi;
 
 import com.naman14.timber.R;
 import com.naman14.timber.dataloaders.AlbumLoader;
@@ -47,7 +50,7 @@ public class ImageUtils {
                                                 new DisplayImageOptions.Builder()
                                                         .cacheInMemory(true)
                                                         .cacheOnDisk(true)
-                                                        .showImageOnFail(R.drawable.ic_empty_music2)
+                                                        .showImageOnFail(R.drawable.youtubify_logo_rect)
                                                         .build();
 
     private static final DisplayImageOptions diskDisplayImageOptions =
@@ -119,6 +122,7 @@ public class ImageUtils {
                               });
     }
 
+    @RequiresApi(api=Build.VERSION_CODES.JELLY_BEAN_MR1)
     public static Drawable createBlurredImageFromBitmap(Bitmap bitmap, Context context, int inSampleSize) {
 
         RenderScript rs = RenderScript.create(context);

@@ -66,12 +66,12 @@ public class Helpers {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
 
-            String appName = "Timber";
+            String appName = "Youtubify";
             try {
                 PackageInfo pInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
                 String version = pInfo.versionName;
                 int versionCode = pInfo.versionCode;
-                appName = "Timber " + version;
+                appName = "Youtubify " + version;
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }

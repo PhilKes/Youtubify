@@ -188,7 +188,7 @@ public class PlaylistDetailActivity extends BaseActivity implements ATEActivityT
     private void loadBitmap(String uri) {
         ImageLoader.getInstance().displayImage(uri, blurFrame,
                 new DisplayImageOptions.Builder().cacheInMemory(true)
-                        .showImageOnFail(R.drawable.ic_empty_music2)
+                        .showImageOnFail(R.drawable.youtubify_logo_rect)
                         .resetViewBeforeLoading(true)
                         .build());
     }

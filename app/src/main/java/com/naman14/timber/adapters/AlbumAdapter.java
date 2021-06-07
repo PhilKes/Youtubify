@@ -75,7 +75,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.ItemHolder> 
 
         ImageLoader.getInstance().displayImage(TimberUtils.getAlbumArtUri(localItem.id).toString(), itemHolder.albumArt,
                 new DisplayImageOptions.Builder().cacheInMemory(true)
-                        .showImageOnLoading(R.drawable.ic_empty_music2)
+                        .showImageOnLoading(R.drawable.youtubify_logo_rect)
                         .resetViewBeforeLoading(true)
                         .displayer(new FadeInBitmapDisplayer(400))
                         .build(), new SimpleImageLoadingListener() {

@@ -223,7 +223,7 @@ public class PlaylistPagerFragment extends Fragment {
         protected void onPostExecute(String uri) {
             ImageLoader.getInstance().displayImage(uri, playlistImage,
                     new DisplayImageOptions.Builder().cacheInMemory(true)
-                            .showImageOnFail(R.drawable.ic_empty_music2)
+                            .showImageOnFail(R.drawable.youtubify_logo_rect)
                             .resetViewBeforeLoading(true)
                             .build(), new SimpleImageLoadingListener() {
                         @Override

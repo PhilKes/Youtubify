@@ -18,10 +18,13 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -90,6 +93,7 @@ public class ArtistDetailFragment extends Fragment {
     }
 
 
+    @RequiresApi(api=Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(
@@ -139,7 +143,7 @@ public class ArtistDetailFragment extends Fragment {
                     ImageLoader.getInstance().displayImage(artist.mArtwork.get(4).mUrl, artistArt,
                             new DisplayImageOptions.Builder().cacheInMemory(true)
                                     .cacheOnDisk(true)
-                                    .showImageOnFail(R.drawable.ic_empty_music2)
+                                    .showImageOnFail(R.drawable.youtubify_logo_rect)
                                     .build(), new SimpleImageLoadingListener() {
                                 @Override
                                 public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {

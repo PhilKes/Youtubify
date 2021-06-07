@@ -1,9 +1,11 @@
 package com.naman14.timber.widgets;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+@SuppressLint("AppCompatCustomView")
 public class SquareImageView extends ImageView {
 
 

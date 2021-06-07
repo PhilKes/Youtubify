@@ -15,6 +15,7 @@
 
 package com.naman14.timber.activities;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -376,8 +377,9 @@ public class BaseActivity extends ATEActivity implements ServiceConnection, Musi
                 } else if (action.equals(MusicService.PLAYLIST_CHANGED)) {
                     baseActivity.onPlaylistChanged();
                 } else if (action.equals(MusicService.TRACK_ERROR)) {
-                    final String errorMsg = context.getString(R.string.error_playing_track,
-                            intent.getStringExtra(MusicService.TrackErrorExtra.TRACK_NAME));
+                    /*final String errorMsg = context.getString(R.string.error_playing_track,
+                            intent.getStringExtra(MusicService.TrackErrorExtra.TRACK_NAME));*/
+                    final String errorMsg = "Error Playing track";
                     Toast.makeText(baseActivity, errorMsg, Toast.LENGTH_SHORT).show();
                 }
             }

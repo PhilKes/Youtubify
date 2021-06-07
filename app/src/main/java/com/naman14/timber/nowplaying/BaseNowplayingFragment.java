@@ -529,7 +529,7 @@ public class BaseNowplayingFragment extends Fragment implements MusicStateListen
             if (albumart != null) {
                 ImageLoader.getInstance().displayImage(TimberUtils.getAlbumArtUri(MusicPlayer.getCurrentAlbumId()).toString(), albumart,
                         new DisplayImageOptions.Builder().cacheInMemory(true)
-                                .showImageOnFail(R.drawable.ic_empty_music2)
+                                .showImageOnFail(R.drawable.youtubify_logo_rect)
                                 .build(), new SimpleImageLoadingListener() {
 
                             @Override
@@ -539,7 +539,7 @@ public class BaseNowplayingFragment extends Fragment implements MusicStateListen
 
                             @Override
                             public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-                                Bitmap failedBitmap = ImageLoader.getInstance().loadImageSync("drawable://" + R.drawable.ic_empty_music2);
+                                Bitmap failedBitmap = ImageLoader.getInstance().loadImageSync("drawable://" + R.drawable.youtubify_logo_rect);
                                 doAlbumArtStuff(failedBitmap);
                             }
 

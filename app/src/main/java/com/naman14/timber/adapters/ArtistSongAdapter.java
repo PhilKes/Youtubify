@@ -81,7 +81,7 @@ public class ArtistSongAdapter extends BaseSongAdapter<ArtistSongAdapter.ItemHol
 
             ImageLoader.getInstance().displayImage(TimberUtils.getAlbumArtUri(localItem.albumId).toString(),
                     itemHolder.albumArt, new DisplayImageOptions.Builder()
-                            .cacheInMemory(true).showImageOnLoading(R.drawable.ic_empty_music2).resetViewBeforeLoading(true).build());
+                            .cacheInMemory(true).showImageOnLoading(R.drawable.youtubify_logo_rect).resetViewBeforeLoading(true).build());
             setOnPopupMenuListener(itemHolder, i - 1);
         }
 

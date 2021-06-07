@@ -1249,6 +1249,7 @@ public class MusicService extends Service {
         }
     }
 
+    @SuppressLint("WrongConstant")
     private Notification buildNotification() {
         final String albumName = getAlbumName();
         final String artistName = getArtistName();
@@ -1265,7 +1266,7 @@ public class MusicService extends Service {
         artwork = ImageLoader.getInstance().loadImageSync(TimberUtils.getAlbumArtUri(getAlbumId()).toString());
 
         if (artwork == null) {
-            artwork = ImageLoader.getInstance().loadImageSync("drawable://" + R.drawable.ic_empty_music2);
+            artwork = ImageLoader.getInstance().loadImageSync("drawable://" + R.drawable.youtubify_logo_rect);
         }
 
         if (mNotificationPostTime == 0) {

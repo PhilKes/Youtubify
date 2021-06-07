@@ -1,5 +1,6 @@
 TODOs
 ====================================
+- Logo Mashup
 - Exclude Folders Option
 - Multiselect
 - Youtube Search 

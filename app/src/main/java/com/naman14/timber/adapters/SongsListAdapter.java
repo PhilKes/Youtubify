@@ -87,7 +87,7 @@ public class SongsListAdapter extends BaseSongAdapter<SongsListAdapter.ItemHolde
 
         ImageLoader.getInstance().displayImage(TimberUtils.getAlbumArtUri(localItem.albumId).toString(),
                 itemHolder.albumArt, new DisplayImageOptions.Builder().cacheInMemory(true)
-                        .showImageOnLoading(R.drawable.ic_empty_music2)
+                        .showImageOnLoading(R.drawable.youtubify_logo_rect)
                         .resetViewBeforeLoading(true).build());
 
         if (MusicPlayer.getCurrentAudioId() == localItem.id) {
