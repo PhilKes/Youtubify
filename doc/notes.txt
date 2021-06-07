@@ -1,0 +1,4 @@
+Search Music -> Youtube Videos -> Download .mp3 to device
+- Playlist usw.
+- exclude folders
+- multiselect

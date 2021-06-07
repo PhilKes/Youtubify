@@ -1,0 +1,6 @@
+TODOs
+====================================
+- Exclude Folders Option
+- Multiselect
+- Youtube Search 
+- Youtube to MP3 download locally

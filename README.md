@@ -1,29 +1,15 @@
-# Timber
+# Youtubify
+
+## Youtube to local MP3 Music Player
+
+## Inspired by "Timber"
 [![Build Status](https://travis-ci.org/naman14/Timber.svg?branch=master)](https://travis-ci.org/naman14/Timber)
 
 Material Design Music Player
 
 This project is no longer in active development. Please refer to [TimberX](https://github.com/naman14/TimberX) instead
 
-<a href='https://play.google.com/store/apps/details?id=naman14.timber&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height=90px/></a>
-
-<a href='https://f-droid.org/repository/browse/?fdid=naman14.timber'><img alt='Get it on F-Droid' src='https://guardianproject.info/wp-content/uploads/2014/07/logo-fdroid.png' height=60px/></a>
-
-## Screenshots
-
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen2.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen3.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen7.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen8.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen9.jpg" width="330" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen10.jpg" width="330" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen1.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen5.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen12.jpg" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen4.png" width="360" height="640">
-<img src="https://raw.githubusercontent.com/naman14/Timber/master/graphics/screen6.png" width="360" height="640">
-
-## Features
+### Features
 - Material design
 - Browse Songs, Albums, Artists
 - Create and edit playlists
@@ -38,11 +24,11 @@ This project is no longer in active development. Please refer to [TimberX](https
 - Lyrics support
 - Chromecast support
 
-## Changelog
+### Changelog
 
 Changelog is available [here](https://github.com/naman14/Timber/blob/master/Changelog.md)
 
-## Credits
+### Credits
 
 * CyanogenMod's [Eleven Music Player](https://github.com/CyanogenMod/android_packages_apps_Eleven)
 * [TimelyTextView](https://github.com/adnan-SM/TimelyTextView)
@@ -51,12 +37,7 @@ Changelog is available [here](https://github.com/naman14/Timber/blob/master/Chan
 * [CircularSeekBar](https://github.com/devadvance/circularseekbar)
 * [Nammu](https://github.com/tajchert/Nammu)
 
-# Donate
-Paypal donation email-
-namandwivedi14@gmail.com
-
-
-## License
+### License
 
 >(c) 2015 Naman Dwivedi 
 
