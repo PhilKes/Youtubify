@@ -86,6 +86,8 @@
             android:title="@string/albumart_lockscreen"
             app:ateKey_pref_checkBox="?ate_key" />
 
+
+
     </com.naman14.timber.widgets.ThemedPreferenceCategory>
 
     <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="LastFM">
