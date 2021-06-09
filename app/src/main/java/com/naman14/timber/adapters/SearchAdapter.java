@@ -41,6 +41,7 @@ import com.naman14.timber.utils.TimberUtils;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.philkes.youtubify.model.YoutubeSong;
 
 import java.util.Collections;
 import java.util.List;
@@ -55,6 +56,7 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
 
     }
 
+    //TODO for viewType==4 YouTubeSong! see(getItemViewType())
     @Override
     public ItemHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         switch (viewType) {
@@ -70,6 +72,10 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
                 View v2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_artist, null);
                 ItemHolder ml2 = new ItemHolder(v2);
                 return ml2;
+            case 4:
+                View v4 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_yt_song, null);
+                ItemHolder ml4 = new ItemHolder(v4);
+                return ml4;
             case 10:
                 View v10 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.search_section_header, null);
                 ItemHolder ml10 = new ItemHolder(v10);
@@ -135,6 +141,19 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
                     }
                 });
                 break;
+            case 4:
+                YoutubeSong youtubeSong = (YoutubeSong) searchResults.get(i);
+                itemHolder.title.setText(youtubeSong.title);
+                itemHolder.songartist.setText(youtubeSong.albumName);
+                ImageLoader.getInstance().displayImage(youtubeSong.thumbnail, itemHolder.albumArt,
+                        new DisplayImageOptions.Builder().cacheInMemory(true)
+                                .cacheOnDisk(true)
+                                .showImageOnFail(R.drawable.youtubify_logo_rect)
+                                .resetViewBeforeLoading(true)
+                                .displayer(new FadeInBitmapDisplayer(400))
+                                .build());
+                setOnPopupMenuListener(itemHolder, i);
+                break;
             case 10:
                 itemHolder.sectionHeader.setText((String) searchResults.get(i));
             case 3:
@@ -198,6 +217,8 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
 
     @Override
     public int getItemViewType(int position) {
+        if (searchResults.get(position) instanceof YoutubeSong)
+            return 4;
         if (searchResults.get(position) instanceof Song)
             return 0;
         if (searchResults.get(position) instanceof Album)

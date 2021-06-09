@@ -24,6 +24,7 @@ import android.provider.MediaStore;
 
 import com.naman14.timber.models.Song;
 import com.naman14.timber.utils.PreferencesUtility;
+import com.philkes.youtubify.yt.YoutubeSearch;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -127,7 +128,6 @@ public class SongLoader {
 
     public static long[] getSongListInFolder(Context context, String path) {
         String[] whereArgs=new String[]{path + "%"};
-        //TODO Add excluded folders in selection
         return getSongListForCursor(makeSongCursor(context, MediaStore.Audio.Media.DATA + " LIKE ?", whereArgs, null));
     }
 

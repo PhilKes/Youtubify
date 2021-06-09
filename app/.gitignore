@@ -1,1 +1,3 @@
 /build
+/src/main/res/values/youtube.properties
+/src/main/java/com/philkes/youtubify/yt/Credentials.java
