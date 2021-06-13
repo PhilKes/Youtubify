@@ -20,4 +20,8 @@ public class YoutubeSong extends Song {
         this.videoId=videoId;
     }
 
+    public String getLink(){
+        return "https://www.youtube.com/watch?v="+videoId;
+    }
+
 }

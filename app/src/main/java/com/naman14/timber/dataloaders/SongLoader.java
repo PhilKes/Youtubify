@@ -143,8 +143,9 @@ public class SongLoader {
         return result.size()<limit ? result : result.subList(0, limit);
     }
 
+    public static String musicMediaPath="/storage/" + new File("/storage").list()[0] + "/media/music";
     static String onlyMediaMusicFolderSelection=" AND " + MediaStore.Audio.Media.DATA
-            + " LIKE '%" + (new File("/storage").list()[0] + "/media/music") + "%'";
+            + " LIKE '%" + musicMediaPath + "%'";
 
     public static Cursor makeSongCursor(Context context, String selection, String[] paramArrayOfString) {
         final String songSortOrder=PreferencesUtility.getInstance(context).getSongSortOrder();

@@ -171,7 +171,7 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
         return searchResults.size();
     }
 
-    private void setOnPopupMenuListener(ItemHolder itemHolder, final int position) {
+    private void setOnPopupMenuListener(final ItemHolder itemHolder, final int position) {
 
         itemHolder.menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,14 +202,27 @@ public class SearchAdapter extends BaseSongAdapter<SearchAdapter.ItemHolder> {
                             case R.id.popup_song_addto_playlist:
                                 AddPlaylistDialog.newInstance(((Song) searchResults.get(position))).show(((AppCompatActivity) mContext).getSupportFragmentManager(), "ADD_PLAYLIST");
                                 break;
+                            case R.id.popup_yt_song_download:
+                                //TODO Download YouTube Song
+                                YoutubeSong YTsong=(YoutubeSong) searchResults.get(position);
+                                //YoutubeToMp3.download(YTsong.getLink());
+                                break;
                         }
                         return false;
                     }
                 });
-                menu.inflate(R.menu.popup_song);
-                //Hide these because they aren't implemented
-                menu.getMenu().findItem(R.id.popup_song_delete).setVisible(false);
-                menu.getMenu().findItem(R.id.popup_song_share).setVisible(false);
+                switch(itemHolder.getItemViewType()){
+                    case 4:
+                        menu.inflate(R.menu.popup_yt_song);
+                        break;
+                    default:
+                        menu.inflate(R.menu.popup_song);
+                        //Hide these because they aren't implemented
+                        menu.getMenu().findItem(R.id.popup_song_delete).setVisible(false);
+                        menu.getMenu().findItem(R.id.popup_song_share).setVisible(false);
+                        break;
+                }
+
                 menu.show();
             }
         });

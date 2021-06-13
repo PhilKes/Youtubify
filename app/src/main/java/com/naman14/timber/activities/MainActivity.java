@@ -16,11 +16,14 @@ package com.naman14.timber.activities;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -57,6 +60,7 @@ import com.naman14.timber.utils.NavigationUtils;
 import com.naman14.timber.utils.TimberUtils;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.philkes.youtubify.yt.YoutubeToMp3;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -211,6 +215,15 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         } else {
             loadEverything();
         }
+        //TODO
+       /* int permission = ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (true) {
+            // request permission
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    10);
+        }*/
 
         addBackstackListener();
 
@@ -250,6 +263,8 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
             });
         }
 
+        //TODO
+        YoutubeToMp3.extractAndDownloadAudio("snYu2JUqSWs");
     }
 
     private void loadEverything() {
@@ -281,6 +296,8 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
                 Nammu.askForPermission(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, permissionReadstorageCallback);
             }
         }
+
+
     }
 
 
